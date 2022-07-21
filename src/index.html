@@ -1,0 +1,101 @@
+---
+title: SGD templates
+layout: 'base.njk'
+---
+
+<section class="container my-12 md:my-24 md:mt-12">
+  <div class="swiper first-swiper">
+    <div class="swiper-wrapper">
+      {%- for post in collections.start-slider -%}
+      <div class="swiper-slide">{{ post.templateContent }}</div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="swiper-pagination first-swiper-pagination"></div>
+</section>
+
+<section id="who-we-are" class="py-12 md:py-24 bg-body-light/5 scroll-margin">
+  <div class="container space-y-10">
+    <div class="max-w-prose space-y-5">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-brand">Кто мы? Почему нам доверяют?</h1>
+
+      <p>Чем мы заслужили доверие наших клиентов, почему с нами работать можно.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+      {%- for post in collections.who-we-are-post -%}
+      <div class="bg-white p-8 pb-16 rounded space-y-4 hover:shadow-2xl hover:shadow-body-light/20 duration-300 transition-all">{{ post.templateContent }}</div>
+      {%- endfor -%}
+    </div>
+
+    <p class="flex items-center justify-center space-x-5 md:!mt-24">
+      <a href="#_" class="inline-flex px-6 py-3 bg-brand text-white rounded">Довертесь нам</a>
+      <a href="#_" class="inline-flex px-6 py-3 border border-body-light/20 rounded">Прочитать отзывы</a>
+    </p>
+  </div>
+</section>
+
+<section id="production" class="container py-12 md:py-24 space-y-10 scroll-margin">
+  <div class="space-y-5 max-w-prose mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-brand">Наша продукция</h1>
+
+    <p>Основные направления работы компании – разработка и производство наукоемких технологий и имплантируемых изделий медицинского назначения.</p>
+  </div>
+
+  <div class="products-list space-y-10 md:space-y-5">
+    {%- for post in collections.products -%}
+    <div class="flex">{{ post.templateContent }}</div>
+    {%- endfor -%}
+  </div>
+</section>
+
+<section id="staff" class="py-12 md:py-24 bg-body-light/5 scroll-margin">
+  <div class="container space-y-10">
+    <div class="space-y-5 max-w-prose mx-auto1 text-center1">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-brand">Сотрудники</h1>
+
+      <p>Наша гордость, наши сотрудники которые делабт возможным невозможное...</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {%- for post in collections.staff -%}
+      <div class="flex items-center space-x-5">{{ post.templateContent }}</div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="container py-12 md:py-24 space-y-10 scroll-margin">
+  <div class="space-y-5 max-w-prose mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-brand">Сертификаты</h1>
+
+    <p>Наши сертификаты, которые мы получили во время посещения разных конкурсов, международных выставок..</p>
+  </div>
+
+  <div class="swiper slide-swiper">
+    <div class="swiper-wrapper">
+      {%- for post in collections.cert-slider -%}
+      <div class="swiper-slide">{{ post.templateContent }}</div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="swiper-pagination slide-swiper-pagination"></div>
+</section>
+
+<section id="contacts" class="py-12 md:py-24 bg-body-light/5 scroll-margin">
+  <div class="container space-y-10">
+    <div class="space-y-5 max-w-prose mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-brand">Контакты</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {%- for post in collections.contact -%}
+      <div class="group space-y-4 p-8 pb-16 relative bg-white rounded hover:shadow-2xl hover:shadow-body-light/20 duration-300 transition-all">{{ post.templateContent }}</div>
+      {%- endfor -%}
+    </div>
+
+    <p class="text-center text-sm">Также, по дополнительным вопросам или предложениями Вы можете написать нам по адресу: <a href="mailto:info@sgd-implants.com" class="underline text-brand hover:no-underline">info@sgd-implants.com</a></p>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+title: Спинальные системы
+description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur, doloribus excepturi laudantium quos sed quibusdam nihil ad unde ipsa?
+featured-img: 'img/surgery.jpg'
+tags: 'start-slider'
+link: ''
+---
+
+<div class="flex gap-24 md-down:gap-6 md-down:flex-col-reverse items-center md-down:text-center">
+  <div class="w-full md:w-6/12 space-y-5">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-brand">{{ title }}</h1>
+    <p>{{ description }}</p>
+
+    <a href="{{ link }}" class="inline-flex !mt-10 px-6 py-3 bg-brand text-white rounded">Посмотреть</a>
+  </div>
+
+  <div class="w-full md:py-16 md:w-6/12 relative rounded-lg cursor-pointer">
+    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-11/12 h-full object-cover">
+      <svg class="w-full h-full object-cover text-gray-100 drop-shadow-xl/50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M45,-78C58.3,-70.3,69,-58.2,75.2,-44.4C81.3,-30.7,82.9,-15.3,83.5,0.4C84.2,16,83.8,32.1,76.5,43.9C69.2,55.7,55.1,63.3,41.2,69.4C27.3,75.4,13.6,80,-0.7,81.2C-15.1,82.5,-30.1,80.3,-41.2,72.6C-52.2,64.9,-59.2,51.6,-67.1,38.5C-75.1,25.5,-83.9,12.8,-83.8,0C-83.8,-12.7,-74.9,-25.4,-65.8,-36.4C-56.7,-47.4,-47.4,-56.7,-36.4,-65.7C-25.4,-74.7,-12.7,-83.5,1.6,-86.2C15.9,-89,31.8,-85.7,45,-78Z" transform="translate(100 100)"></path>
+      </svg>
+    </div>
+
+    <img src="{{ featured-img }}" class="relative rounded-lg object-cover w-full h-full" alt="{{ title }}" />
+  </div>
+</div>
